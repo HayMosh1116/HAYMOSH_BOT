@@ -9,6 +9,7 @@ const {
     DisconnectReason,
     getContentType,
     fetchLatestBaileysVersion,
+    fetchLatestWaWebVersion,
     useMultiFileAuthState,
     makeCacheableSignalKeyStore,
     jidDecode,
