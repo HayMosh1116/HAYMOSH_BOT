@@ -3,13 +3,13 @@ const {
     isJidGroup,
     jidNormalizedUser,
     isJidBroadcast,
+    fetchLatestWaWebVersion,
     downloadMediaMessage,
     downloadContentFromMessage,
     downloadAndSaveMediaMessage,
     DisconnectReason,
     getContentType,
     fetchLatestBaileysVersion,
-    fetchLatestWaWebVersion,
     useMultiFileAuthState,
     makeCacheableSignalKeyStore,
     jidDecode,
@@ -125,6 +125,7 @@ let store;
 let reconnectAttempts = 0;
 const MAX_RECONNECT_ATTEMPTS = 50;
 const RECONNECT_DELAY = 5000;
+
 /*
 async function startPrince() {
     try {
@@ -179,6 +180,8 @@ async function startPrince() {
                 return message;
             },
         };
+
+      
 */
 
 async function startPrince() {
@@ -247,11 +250,6 @@ async function startPrince() {
                 return message;
             },
         };
-
-    } catch (err) {
-        console.error(err);
-    }
-}
 
         Prince = princeConnect(princeSock);
 
